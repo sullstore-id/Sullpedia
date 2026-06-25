@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Akun - SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <main class="account-page">
+
+    <header class="account-header">
+      <button class="setting-btn" type="button">⚙</button>
+
+      <div class="account-user">
+        <div class="avatar-box">
+          <div id="accountInitial" class="avatar">U</div>
+          <span class="online-dot"></span>
+        </div>
+
+        <div>
+          <h1 id="accountUsername">User</h1>
+
+          <button id="copyUidBtn" class="uid-box" type="button">
+            UID: <span id="accountUid">Loading</span>
+            <small>⧉</small>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="balance-box">
+      <div class="balance-title">
+        <h3>Informasi Saldo</h3>
+        <span>👑 Member</span>
+      </div>
+
+      <div class="balance-grid">
+  <div>
+    <p>Utama</p>
+    <h2 id="accountSaldoUtama">Rp 0</h2>
+  </div>
+
+  <div>
+    <p>QRIS</p>
+    <h2 id="accountSaldoQris">Rp 0</h2>
+  </div>
+</div>
+    </section>
+
+    <section class="account-section">
+      <h3>Pengaturan Akun</h3>
+
+      <div class="account-list">
+        <a href="#" class="account-item">
+          <div class="item-icon">👤</div>
+          <div>
+            <h4>Informasi Pribadi</h4>
+            <p>Ubah nama, email, dan kontak</p>
+          </div>
+          <span>›</span>
+        </a>
+
+        <a href="#" class="account-item">
+          <div class="item-icon">🛡</div>
+          <div>
+            <h4>Keamanan & PIN</h4>
+            <p>Ganti password dan akses akun</p>
+          </div>
+          <span>›</span>
+        </a>
+
+        <a href="#" class="account-item">
+          <div class="item-icon">🔄</div>
+          <div>
+            <h4>Sync ke Web</h4>
+            <p>Buka akun di browser lain</p>
+          </div>
+          <span>›</span>
+        </a>
+
+        <a href="#" class="account-item">
+          <div class="item-icon">🏦</div>
+          <div>
+            <h4>Rekening Pencairan</h4>
+            <p>Kelola bank tujuan</p>
+          </div>
+          <span>›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="account-section">
+      <h3>Bantuan & Info</h3>
+
+      <div class="account-list">
+        <a href="#" class="account-item">
+          <div class="item-icon">💬</div>
+          <div>
+            <h4>Customer Service</h4>
+            <p>Hubungi admin via WhatsApp</p>
+          </div>
+          <span>›</span>
+        </a>
+
+        <a href="#" class="account-item">
+          <div class="item-icon">ℹ</div>
+          <div>
+            <h4>Tentang SullPedia</h4>
+            <p>Versi 1.0.0 Stable Build</p>
+          </div>
+          <span>›</span>
+        </a>
+      </div>
+    </section>
+
+    <button id="logoutBtn" class="logout-account-btn" type="button">
+      ↪ Keluar Akun
+    </button>
+
+    <footer class="account-footer">
+      <h4>SullPedia</h4>
+      <p>Layanan digital premium dan sosial media.</p>
+    </footer>
+
+    <nav class="bottom-nav">
+      <a class="nav-link" href="index.html">
+        <span>⌂</span>
+        Home
+      </a>
+
+      <a class="nav-link" href="transaksi.html">
+        <span>☰</span>
+        Transaksi
+      </a>
+
+      <a class="nav-link active" href="akun.html">
+        <span>●</span>
+        Akun
+      </a>
+    </nav>
+
+  </main>
+
+  <script type="module" src="akun.js"></script>
+</body>
+</html>

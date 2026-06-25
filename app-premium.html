@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>App Premium - SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <main class="premium-page">
+    <header class="premium-header">
+      <a href="index.html" class="premium-back">‹</a>
+      <div>
+        <h1>App Premium</h1>
+        <p>Pilih aplikasi digital yang ingin kamu beli.</p>
+      </div>
+    </header>
+
+    <section class="premium-search-box">
+      <input id="searchAppInput" type="text" placeholder="Cari aplikasi..." />
+    </section>
+
+    <section id="appGrid" class="premium-app-grid">
+      <!-- Data aplikasi muncul dari JS -->
+    </section>
+  </main>
+
+  <script type="module" src="app-premium.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <main class="app">
+
+    <!-- HALAMAN LOGIN DAN REGISTER -->
+    <section id="authPage" class="auth-page">
+      <div class="auth-card">
+
+        <div class="logo">SP</div>
+
+        <h1>SullPedia</h1>
+        <p class="subtitle">
+          Masuk atau daftar untuk mengakses layanan premium dan sosial media.
+        </p>
+
+        <div class="tab-box">
+          <button id="btnLoginTab" class="tab active" type="button">Login</button>
+          <button id="btnRegisterTab" class="tab" type="button">Register</button>
+        </div>
+
+        <form id="loginForm" class="form">
+          <label>
+            Email
+            <input id="loginEmail" type="email" placeholder="Masukkan email" required />
+          </label>
+
+          <label>
+            Password
+            <input id="loginPassword" type="password" placeholder="Masukkan password" required />
+          </label>
+
+          <button class="main-btn" type="submit">Masuk</button>
+        </form>
+
+        <form id="registerForm" class="form hidden">
+          <label>
+            Username
+            <input id="registerUsername" type="text" placeholder="Masukkan username" required />
+          </label>
+
+          <label>
+            Email
+            <input id="registerEmail" type="email" placeholder="Masukkan email" required />
+          </label>
+
+          <label>
+            Password
+            <input id="registerPassword" type="password" placeholder="Minimal 6 karakter" required />
+          </label>
+
+          <button class="main-btn" type="submit">Daftar</button>
+        </form>
+
+        <p id="authMessage" class="message"></p>
+      </div>
+    </section>
+
+    <!-- HALAMAN DASHBOARD -->
+    <section id="dashboardPage" class="dashboard hidden">
+
+      <header class="header">
+        <div>
+          <p id="greeting">Selamat malam,</p>
+          <h2 id="usernameText">User</h2>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn" type="button">
+          Keluar
+        </button>
+      </header>
+
+      <section class="wallet-panel">
+
+        <div class="wallet-grid">
+  <div class="wallet-card">
+    <p>Saldo</p>
+    <h3 id="saldoUtamaText">Rp 0</h3>
+  </div>
+
+  <div class="wallet-card">
+    <p>QRIS</p>
+    <h3 id="saldoQrisText">Rp 0</h3>
+  </div>
+</div>
+
+        <div class="info-box">
+          Transaksi diproses otomatis. Hindari transaksi pada jam maintenance 23:30 sampai 00:30.
+        </div>
+
+        <div class="shortcut-grid four-menu">
+  <a href="index.html" class="shortcut-link">
+    <span>+</span>
+    Isi Saldo
+  </a>
+
+  <a href="akun.html" class="shortcut-link">
+    <span>◎</span>
+    Akun Saya
+  </a>
+
+  <a href="mutasi.html" class="shortcut-link">
+    <span>⇄</span>
+    Mutasi
+  </a>
+
+  <a href="merchant.html" class="shortcut-link">
+    <span>▣</span>
+    Merchant
+  </a>
+
+  <a id="adminQrisLink" href="admin-qris.html" class="shortcut-link hidden">
+    <span>⚙</span>
+    Admin QRIS
+  </a>
+  
+  <a id="adminPremiumLink" href="admin-premium.html" class="shortcut-link hidden">
+  <span>★</span>
+  Admin App
+</a>
+
+ <a id="adminSosmedLink" href="admin-sosmed.html" class="shortcut-link hidden">
+  <span>↗</span>
+  Admin SS
+</a>
+</div>
+
+      </section>
+
+      <section class="banner">
+        <div>
+          <small>SullPedia</small>
+          <h2>Layanan digital cepat dalam satu dashboard.</h2>
+          <p>
+            Kelola pembelian app premium dan kebutuhan sosial media dengan tampilan sederhana.
+          </p>
+        </div>
+
+        <div class="banner-icon">
+          PP
+        </div>
+      </section>
+      
+      <a
+  class="cs-whatsapp-card"
+  href="https://wa.me/6282273896548?text=Halo%20Admin%20SullPedia%2C%20saya%20butuh%20bantuan."
+  target="_blank"
+  rel="noopener"
+>
+  <div class="cs-wa-icon">WA</div>
+
+  <div>
+    <h3>Gabung Channel WhatsApp</h3>
+    <p>Jangan sampai ketinggalan informasi terbaru</p>
+  </div>
+
+  <span>➜</span>
+</a>
+
+      <!-- HOME -->
+      <section id="homeSection" class="content">
+        <div class="section-head">
+          <h3>Menu Favorit</h3>
+          <span>1/1</span>
+        </div>
+
+        <div class="menu-grid">
+          <a href="app-premium.html" class="menu-card menu-link">
+  <div class="menu-icon">★</div>
+  <h4>App Premium</h4>
+  <p>Netflix, Canva, Spotify, CapCut, dan layanan digital lainnya.</p>
+</a>
+
+          <a href="suntik-sosmed.html" class="menu-card menu-link">
+            <div class="menu-icon">↗</div>
+             <h4>Suntik Sosmed</h4>
+            <p>Followers, likes, views, dan kebutuhan sosial media lainnya.</p>
+            </a>
+        </div>
+      </section>
+
+      <!-- TRANSAKSI -->
+      <section id="transactionSection" class="content hidden">
+        <div class="section-head">
+          <h3>Transaksi</h3>
+          <span>Riwayat</span>
+        </div>
+
+        <div class="empty">
+          <h4>Belum ada transaksi</h4>
+          <p>Riwayat transaksi akan muncul di sini.</p>
+        </div>
+      </section>
+
+      <!-- AKUN -->
+      <section id="accountSection" class="content hidden">
+        <div class="section-head">
+          <h3>Akun</h3>
+          <span>Profil</span>
+        </div>
+
+        <div class="profile-card">
+          <div id="profileInitial" class="profile-avatar">U</div>
+
+          <div>
+            <h4 id="profileName">User</h4>
+            <p id="profileEmail">email@example.com</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="protection-card">
+  <div class="protection-line"></div>
+
+  <div class="protection-icon">
+    ✓
+  </div>
+
+  <div class="protection-info">
+    <h3>SullPedia Protection</h3>
+    <p>Transaksi aman 100% dengan sistem saldo dan riwayat otomatis.</p>
+  </div>
+
+  <div class="protection-badge">
+    🛡 Terlindungi
+  </div>
+</section>
+
+      <nav class="bottom-nav">
+  <a class="nav-link active" href="index.html">
+    <span>⌂</span>
+    Home
+  </a>
+
+  <a class="nav-link" href="transaksi.html">
+    <span>☰</span>
+    Transaksi
+  </a>
+
+  <a class="nav-link" href="akun.html">
+    <span>●</span>
+    Akun
+  </a>
+</nav>
+
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

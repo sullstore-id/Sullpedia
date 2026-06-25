@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Detail Sosmed - SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <main class="sosmed-detail-page">
+    <header class="sosmed-detail-header">
+      <a href="suntik-sosmed.html" class="premium-back">‹</a>
+      <div>
+        <h1 id="serviceTitle">Suntik Sosmed</h1>
+        <p id="serviceSubtitle">Pilih paket layanan yang tersedia.</p>
+      </div>
+    </header>
+
+    <section class="target-card">
+      <label>
+        Link / Username Target
+        <input
+          id="targetInput"
+          type="text"
+          placeholder="Contoh: https://instagram.com/username"
+        />
+      </label>
+    </section>
+
+    <section class="sosmed-detail-title-row">
+      <div>
+        <h2>Pilihan Nominal</h2>
+        <p id="sosmedSaldoInfo">Saldo utama: Rp 0</p>
+      </div>
+
+      <button id="refreshBtn" type="button">↻</button>
+    </section>
+
+    <section id="sosmedProductList" class="sosmed-product-list">
+      <!-- Produk muncul dari JS -->
+    </section>
+  </main>
+
+  <script type="module" src="sosmed-detail.js"></script>
+</body>
+</html>
