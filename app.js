@@ -16,6 +16,8 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
+import { checkMaintenanceAccess } from "./maintenance-guard.js";
+
 /* ELEMENT LOGIN REGISTER */
 const authPage = document.getElementById("authPage");
 const dashboardPage = document.getElementById("dashboardPage");
@@ -144,8 +146,12 @@ logoutBtn.addEventListener("click", async () => {
 });
 
 /* CEK USER LOGIN */
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, async (user) => {
   if (user) {
+    const access = await checkMaintenanceAccess(user);
+
+    if (!access.allowed) return;
+
     showDashboard(user);
   } else {
     showAuthPage();
@@ -180,6 +186,7 @@ function listenUserBalance(uid) {
   const adminQrisLink = document.getElementById("adminQrisLink");
 const adminPremiumLink = document.getElementById("adminPremiumLink");
 const adminSosmedLink = document.getElementById("adminSosmedLink");
+const adminMaintenanceLink = document.getElementById("adminMaintenanceLink");
 
   if (!saldoUtamaText || !saldoQrisText) return;
 
@@ -212,6 +219,14 @@ const adminSosmedLink = document.getElementById("adminSosmedLink");
     adminSosmedLink.classList.remove("hidden");
   } else {
     adminSosmedLink.classList.add("hidden");
+  }
+}
+
+if (adminMaintenanceLink) {
+  if (data.role === "admin") {
+    adminMaintenanceLink.classList.remove("hidden");
+  } else {
+    adminMaintenanceLink.classList.add("hidden");
   }
 }
   });
