@@ -23,16 +23,27 @@ const tabs = document.querySelectorAll(".trx-tab");
 let allOrders = [];
 let activeFilter = "all";
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, async (user) => {
   if (!user) {
     window.location.href = "index.html";
     return;
   }
-  
-  const access = await checkMaintenanceAccess(user);
-if (!access.allowed) return;
 
-  listenOrders(user.uid);
+  try {
+    const access = await checkMaintenanceAccess(user);
+    if (!access.allowed) return;
+
+    listenOrders(user.uid);
+  } catch (error) {
+    console.error("Gagal cek maintenance:", error);
+
+    transactionList.innerHTML = `
+      <div class="empty">
+        <h4>Gagal memuat transaksi</h4>
+        <p>${error.message || "Terjadi kesalahan saat memuat halaman transaksi."}</p>
+      </div>
+    `;
+  }
 });
 
 tabs.forEach((tab) => {
