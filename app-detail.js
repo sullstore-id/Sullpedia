@@ -58,18 +58,18 @@ const premiumCatalog = {
     icon: "CC",
     products: [
       {
-        name: "CapCut Pro 1 Bulan",
+        name: "CapCut Pro 7 Hari Fullgar",
         desc: "Akses fitur pro premium",
         price: 11000,
         stock: 0,
   available: false
       },
       {
-        name: "CapCut Pro 1 Tahun",
+        name: "CapCut Pro 1 Bulan Fullgar",
         desc: "Akses fitur pro premium",
-        price: 25000,
-        stock: 0,
-  available: false
+        price: 32000,
+        stock: 1,
+  available: true 
       }
     ]
   },
@@ -135,11 +135,11 @@ const premiumCatalog = {
     icon: "SP",
     products: [
       {
-        name: "Spotify Premium 1 Bulan",
+        name: "Spotify 1 Bulan Bergaransi Famplan",
         desc: "Akun musik premium",
-        price: 11000,
-        stock: 0,
-  available: false
+        price: 16500,
+        stock: 3,
+  available: true
       },
       {
         name: "Spotify Premium 3 Bulan",
