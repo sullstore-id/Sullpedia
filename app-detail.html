@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Detail App - SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <main class="detail-app-page">
+    <header class="detail-app-header">
+      <a href="app-premium.html" class="premium-back">‹</a>
+      <div>
+        <h1 id="appTitle">Kembali</h1>
+        <p id="appSubtitle">Pilih produk premium.</p>
+      </div>
+    </header>
+
+    <section class="buyer-card">
+      <label>
+        Nomor WhatsApp Pembeli
+        <input
+          id="buyerWhatsapp"
+          type="tel"
+          placeholder="Contoh: 082273896548"
+          maxlength="16"
+        />
+      </label>
+    </section>
+
+    <section class="product-title-row">
+      <div>
+        <h2>Pilihan Nominal</h2>
+        <p id="saldoInfo">Saldo utama: Rp 0</p>
+      </div>
+
+      <button id="refreshBtn" type="button">↻</button>
+    </section>
+
+    <section id="productList" class="product-list">
+      <!-- Produk muncul dari JS -->
+    </section>
+  </main>
+
+  <script type="module" src="app-detail.js"></script>
+</body>
+</html>

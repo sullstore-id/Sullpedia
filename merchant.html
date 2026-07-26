@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>QRIS Merchant - SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="qris-page">
+
+    <header class="qris-header">
+      <a href="index.html" class="back-btn">‹</a>
+      <h1>QRIS Merchant</h1>
+    </header>
+
+    <section class="qris-card">
+      <button id="zoomQrisBtn" class="qris-image-box" type="button">
+        <img src="qris.jpg" alt="QRIS Merchant SullPedia" />
+      </button>
+
+      <h2 id="merchantName">SullPedia</h2>
+      <p class="qris-hint">Klik QR untuk zoom</p>
+
+      <div class="saldo-terkumpul">
+        <div>
+          <p>Saldo QRIS</p>
+          <h3 id="saldoQrisText">Rp 0</h3>
+        </div>
+
+        <button id="refreshBtn" type="button">↻</button>
+      </div>
+    </section>
+
+    <section class="qris-menu-list">
+      <button id="openConfirmBtn" class="qris-menu-item" type="button">
+        <div class="qris-icon">☁</div>
+        <div>
+          <h3>Konfirmasi Saldo</h3>
+          <p>Upload bukti transfer QRIS</p>
+        </div>
+        <span>›</span>
+      </button>
+
+      <a href="mutasi.html" class="qris-menu-item">
+        <div class="qris-icon">↺</div>
+        <div>
+          <h3>Mutasi</h3>
+          <p>Riwayat transaksi QRIS</p>
+        </div>
+        <span>›</span>
+      </a>
+
+      <button id="moveToMainBtn" class="qris-menu-item" type="button">
+        <div class="qris-icon">▣</div>
+        <div>
+          <h3>Pindahkan ke Saldo Utama</h3>
+          <p>Transfer saldo QRIS ke saldo utama</p>
+        </div>
+        <span>›</span>
+      </button>
+    </section>
+
+    <div id="overlay" class="modal-overlay hidden"></div>
+
+    <section id="legalModal" class="bottom-sheet hidden">
+      <div class="sheet-head">
+        <div class="sheet-icon danger">🛡</div>
+        <h2>Peringatan Hukum</h2>
+        <button id="closeLegalBtn" type="button">×</button>
+      </div>
+
+      <div class="legal-box">
+        <p>
+          Jangan gunakan layanan ini untuk tindakan ilegal, penipuan, pencucian uang,
+          atau pelanggaran hukum lain. Seluruh konsekuensi penyalahgunaan ditanggung
+          oleh pengguna.
+        </p>
+      </div>
+
+      <label class="check-row">
+        <input id="agreeCheck" type="checkbox" />
+        <span>Saya setuju dan mematuhi aturan hukum.</span>
+      </label>
+
+      <button id="continueUploadBtn" class="sheet-main-btn" type="button">
+        Lanjut Upload Bukti
+      </button>
+    </section>
+
+    <section id="uploadModal" class="bottom-sheet hidden">
+      <div class="sheet-head">
+        <div class="sheet-icon">☁</div>
+        <h2>Upload Bukti</h2>
+        <button id="closeUploadBtn" type="button">×</button>
+      </div>
+
+      <form id="uploadProofForm" class="proof-form">
+        <label>
+          Nominal Transfer
+          <input id="amountInput" type="number" min="1000" placeholder="Contoh: 10000" required />
+        </label>
+
+        <label>
+          Bukti Pembayaran
+          <input id="proofInput" type="file" accept="image/*" required />
+        </label>
+
+        <button class="sheet-main-btn" type="submit">
+          Kirim Konfirmasi
+        </button>
+      </form>
+    </section>
+
+    <section id="zoomModal" class="zoom-modal hidden">
+      <button id="closeZoomBtn" type="button">×</button>
+      <img src="qris.jpg" alt="QRIS Merchant SullPedia" />
+    </section>
+
+  </main>
+
+  <script type="module" src="merchant.js"></script>
+</body>
+</html>

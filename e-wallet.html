@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Wallet - SullPedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="ewallet-page">
+    <header class="ewallet-header">
+      <a href="index.html" class="ewallet-back" aria-label="Kembali">‹</a>
+      <div>
+        <h1>E-Wallet</h1>
+        <p>Pilih e-wallet yang mau kamu top up.</p>
+      </div>
+    </header>
+
+    <section class="ewallet-hero">
+      <div class="ewallet-hero-top">
+        <div>
+          <h2 style="margin:0 0 6px;">Topup e-Wallet</h2>
+          <p style="margin:0; color: rgba(255,255,255,0.8);">Proses cepat, otomatis, dan langsung masuk ke riwayat transaksi.</p>
+        </div>
+        <div class="ewallet-safe">100% Aman</div>
+      </div>
+
+      <div class="balance-line">
+        <div class="balance-pill">Saldo utama: <span id="ewalletSaldoText">Rp 0</span></div>
+        <div class="balance-pill">4 layanan tersedia</div>
+      </div>
+    </section>
+
+    <section class="ewallet-search-box">
+      <input id="ewalletSearchInput" type="text" placeholder="Cari e-wallet..." />
+    </section>
+
+    <section id="ewalletServiceList" class="ewallet-service-grid"></section>
+  </main>
+
+  <script type="module" src="e-wallet.js"></script>
+</body>
+</html>

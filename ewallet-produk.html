@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk E-Wallet - SullPedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="ewallet-detail-page">
+    <header class="ewallet-detail-header">
+      <a href="e-wallet.html" class="ewallet-back" aria-label="Kembali">‹</a>
+      <div>
+        <h1 id="serviceTitle">Top Up E-Wallet</h1>
+        <p id="serviceSubtitle">Isi nomor tujuan lalu pilih nominal.</p>
+      </div>
+    </header>
+
+    <section class="ewallet-detail-hero">
+      <div class="ewallet-detail-top">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div id="serviceHeroIcon" class="ewallet-service-icon bg-dana">D</div>
+          <div>
+            <h2 id="serviceHeroName" style="margin:0 0 4px;">Top Up Dana</h2>
+            <p id="serviceHeroDesc" style="margin:0; color: rgba(255,255,255,0.8);">Top up e-wallet cepat & aman.</p>
+          </div>
+        </div>
+        <div class="ewallet-safe">Saldo: <span id="saldoInfoText">Rp 0</span></div>
+      </div>
+    </section>
+
+    <section class="ewallet-detail-form">
+      <label for="buyerPhoneInput">Nomor HP</label>
+      <input id="buyerPhoneInput" class="ewallet-form-input" type="tel" inputmode="numeric" placeholder="Nomor HP" />
+      <p class="ewallet-help-text" id="buyerPhoneHelp">Contoh: 081234567890</p>
+    </section>
+
+    <section class="product-panel">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px;">
+        <div>
+          <h2 style="margin:0 0 4px;">Pilih Nominal</h2>
+          <p class="product-subtext" id="productSummaryText">Belum ada nominal dipilih.</p>
+        </div>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+
+      <div class="buy-action-bar">
+        <div id="buySummary" class="buy-summary">Pilih nominal dulu bre.</div>
+        <button id="buyNowBtn" type="button">Beli Sekarang</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="ewallet-produk.js"></script>
+</body>
+</html>

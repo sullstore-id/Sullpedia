@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admin Maintenance - SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="admin-premium-page">
+    <header class="admin-premium-header">
+      <a href="index.html" class="premium-back">‹</a>
+      <div>
+        <h1>Maintenance</h1>
+        <p>Aktifkan atau matikan mode perbaikan website.</p>
+      </div>
+    </header>
+
+    <section class="maintenance-admin-card">
+      <div class="maintenance-admin-status">
+        <span>Status Website</span>
+        <strong id="maintenanceStatusText">Memuat...</strong>
+      </div>
+
+      <label>
+        Pesan Maintenance
+        <textarea
+          id="maintenanceMessageInput"
+          rows="5"
+          placeholder="Tulis pesan untuk user..."
+        ></textarea>
+      </label>
+
+      <button id="toggleMaintenanceBtn" class="main-btn" type="button">
+        Memuat...
+      </button>
+    </section>
+  </main>
+
+  <script type="module" src="admin-maintenance.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Transaksi - SullPedia</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <main class="transaction-page">
+    <header class="transaction-top"></header>
+
+    <section class="transaction-summary">
+      <div>
+        <p>Sukses</p>
+        <h3 id="successCount">0</h3>
+      </div>
+
+      <div>
+        <p>Proses</p>
+        <h3 id="processCount">0</h3>
+      </div>
+
+      <div>
+        <p>Gagal</p>
+        <h3 id="failedCount">0</h3>
+      </div>
+    </section>
+
+    <section class="transaction-tabs">
+      <button class="trx-tab active" data-filter="all" type="button">Semua</button>
+      <button class="trx-tab" data-filter="success" type="button">Sukses</button>
+      <button class="trx-tab" data-filter="processing" type="button">Proses</button>
+      <button class="trx-tab" data-filter="failed" type="button">Gagal</button>
+    </section>
+
+    <section class="transaction-filter">
+      <span>Filter</span>
+      <span>⌄</span>
+    </section>
+
+    <section id="transactionList" class="transaction-list">
+      <!-- Riwayat transaksi muncul dari JS -->
+    </section>
+
+    <nav class="bottom-nav">
+      <a class="nav-link" href="index.html">
+        <span>⌂</span>
+        Home
+      </a>
+
+      <a class="nav-link active" href="transaksi.html">
+        <span>☰</span>
+        Transaksi
+      </a>
+
+      <a class="nav-link" href="akun.html">
+        <span>●</span>
+        Akun
+      </a>
+    </nav>
+  </main>
+
+  <script type="module" src="transaksi.js"></script>
+</body>
+</html>

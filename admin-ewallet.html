@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin E-Wallet - SullPedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="admin-ewallet-page">
+    <header class="admin-ewallet-header">
+      <a href="index.html" class="ewallet-back" aria-label="Kembali">‹</a>
+      <div>
+        <h1>Admin E-Wallet</h1>
+        <p>Kelola semua order top up e-wallet dari sini.</p>
+      </div>
+    </header>
+
+    <section class="admin-ewallet-hero">
+      <div class="admin-ewallet-top">
+        <div>
+          <h2 style="margin:0 0 6px;">Panel Order E-Wallet</h2>
+          <p style="margin:0; color: rgba(255,255,255,0.8);">Pantau order realtime, ubah status, dan isi catatan admin.</p>
+        </div>
+        <div class="admin-role-badge">Realtime</div>
+      </div>
+      <div class="balance-line">
+        <div class="balance-pill">Semua order: <span id="adminTotalOrderText">0</span></div>
+        <div class="balance-pill">Diproses: <span id="adminProcessingText">0</span></div>
+        <div class="balance-pill">Sukses: <span id="adminSuccessText">0</span></div>
+        <div class="balance-pill">Gagal: <span id="adminFailedText">0</span></div>
+      </div>
+    </section>
+
+    <section class="admin-filter-bar">
+      <button class="admin-filter-btn active" type="button" data-filter="all">Semua</button>
+      <button class="admin-filter-btn" type="button" data-filter="processing">Menunggu</button>
+      <button class="admin-filter-btn" type="button" data-filter="success">Sukses</button>
+      <button class="admin-filter-btn" type="button" data-filter="failed">Gagal</button>
+    </section>
+
+    <section class="admin-list-wrap">
+      <div id="adminOrderList" class="admin-order-list"></div>
+    </section>
+
+    <section class="admin-editor-card">
+      <h2 style="margin:0 0 14px;">Editor Order</h2>
+
+      <label class="admin-field-label" for="adminStatusSelect">Status</label>
+      <select id="adminStatusSelect" class="admin-select">
+        <option value="processing">Menunggu</option>
+        <option value="success">Sukses</option>
+        <option value="failed">Gagal</option>
+      </select>
+
+      <label class="admin-field-label" for="adminNoteInput" style="margin-top:16px;">Catatan Admin</label>
+      <textarea id="adminNoteInput" class="admin-note-input" placeholder="Contoh: Top up berhasil diproses admin, tunggu saldo masuk ke akun tujuan."></textarea>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:16px; flex-wrap:wrap;">
+        <p id="adminSelectedInfo" class="product-subtext" style="margin:0;">Belum ada order dipilih.</p>
+        <button id="adminSaveBtn" class="admin-save-btn" type="button">Simpan Perubahan</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="admin-ewallet.js"></script>
+</body>
+</html>
